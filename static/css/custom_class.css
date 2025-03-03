@@ -1633,6 +1633,10 @@ section {
     .my-gap-md-6 {
         gap: 24px;
     }
+
+    .left-margin {
+        margin-left: 0 !important;
+    }
 }
 
 

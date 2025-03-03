@@ -196,3 +196,58 @@ header {
 .events-items .event:hover {
     transform: scale(.98);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.image-gallery-area swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.image-gallery-area swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+.image-gallery-area swiper-slide img {
+    display: block;
+    padding: 2px;
+    border: 1px solid var(--white);
+    box-shadow: var(--shadow-2);
+    width: 100%;
+}
+
+
+
+
+
+
+
+@media (max-width:991px) {
+    .hero-content-area .content {
+        width: 100%;
+    }
+
+    .hero-content-area {
+        margin-top: 10%;
+    }
+
+    .hero-content-area .video-area {
+        width: 80%;
+        height: 300px;
+        /* border: 2px solid var(--white); */
+        border-radius: 2px;
+    }
+}
