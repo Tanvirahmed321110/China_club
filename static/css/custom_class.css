@@ -102,7 +102,7 @@ button {
 
 button:active,
 a:active {
-    transform: translateY(-3px);
+    /* transform: translateY(-3px); */
 }
 
 

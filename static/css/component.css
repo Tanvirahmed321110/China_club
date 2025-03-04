@@ -237,7 +237,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: var(--fw-500);
+    font-weight: var(--fw-400);
     font-family: inherit;
     border-radius: 4px;
     transition: .3s linear;
@@ -250,7 +250,7 @@
 }
 
 
-/* .my-btn::after,
+.my-btn::after,
 .my-btn-sm::after {
     content: '';
     width: 100%;
@@ -261,6 +261,7 @@
     z-index: 2;
     transition: transform .8s linear, background .3s linear;
     transform: translateY(-55px);
+    background-color: var(--primary-hover-color);
 }
 
 
@@ -270,7 +271,8 @@
 .my-btn-sm span {
     position: relative;
     z-index: 4;
-} */
+    color: var(--white);
+}
 
 
 
@@ -282,7 +284,8 @@
 
 .my-btn:focus,
 .my-btn:active {
-    outline: 4px solid #a5a4a461;
+    outline: 4px solid var(--input);
+    transition: .15s linear;
 }
 
 
@@ -317,17 +320,17 @@
     color: var(--white);
 }
 
-.my-secendary-btn:hover {
+/* .my-secendary-btn:hover {
     background-color: var(--secondary-hover);
-}
+} */
 
 .my-btn.my-btn-full {
     width: 100%;
 }
 
-.my-primary-btn:hover {
+/* .my-primary-btn:hover {
     background-color: var(--primary-hover-color);
-}
+} */
 
 /* close button */
 .close-btn-right {
@@ -908,13 +911,10 @@ input[type="radio"]:checked::after {
 
 .my-dropdown .dropdown-item {
     width: 100%;
-    padding: 4px 8px;
+    padding: 6px 12px;
 }
 
-.my-dropdown a:hover {
-    background-color: var(--primary-color);
-    color: var(--white) !important;
-}
+
 
 /* hover */
 .my-dropdown-parent:hover .my-dropdown {
@@ -976,7 +976,7 @@ input[type="radio"]:checked::after {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: var(--primary-color);
+    background: var(--primary-hover-color);
     left: 0;
     top: 0;
     animation: animations 2.1s infinite ease-in-out;
@@ -1116,7 +1116,7 @@ input[type="radio"]:checked::after {
     right: 0px;
     top: -10px;
     transform: translateX(0%);
-    background-color: var(--before);
+    background-color: var(--primary-hover-color);
     width: 12px;
     height: 12px;
     border-radius: 50%;

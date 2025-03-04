@@ -5,8 +5,8 @@
 
 :root {
     /*______  Color  ______ */
-    --primary-color: #1878F2;
-    --primary-hover-color: #0554BC;
+    --primary-color: #e4232a;
+    --primary-hover-color: #be1f25;
     --secondary-color: #081621;
     --orange: #ffc107;
     --green: #0aad0a;
@@ -18,10 +18,9 @@
     --white-off: #F0F3F2;
     --border-color: #ededed;
     --border-color2: #c7c7c7;
-    --red: #EE1B24;
-    --after: #1878F2;
-    --before: #2d78dbe8;
-    --input: #1876f25b;
+    --after: #d88e2dc1;
+    --before: #cbae3733;
+    --input: #debe3e4f;
 
 
     /* ______ bg color in section ______ */

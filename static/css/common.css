@@ -14,7 +14,7 @@ header {
     left: 0;
     width: 100%;
     background-color: var(--secondary-color);
-    height: 90px;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,28 +36,42 @@ header {
 }
 
 .header-area .my-dropdown-parent li a {
-    color: var(--primary-color);
+    color: var(--white);
+    font-size: var(--fs-md) !important;
+    padding: 6px 12px;
+}
+
+.header-area .my-dropdown-parent li a:hover {
+    background-color: var(--primary-hover-color);
+    color: var(--white);
+}
+
+.header-area .my-dropdown-parent:hover .nav-item {
+    color: var(--white);
 }
 
 .header-area .nav-item:hover,
 .header-area .my-dropdown-parent:hover {
     background-color: var(--primary-color);
-    color: var(--border-color);
+    color: var(--white);
 }
 
 .header-area .my-dropdown {
     border-radius: 2px;
+    background-color: var(--primary-color);
+    border: none;
 }
 
 .header-area .member-login-btn {
     word-wrap: normal;
     text-wrap: nowrap;
     padding: 10px 16px;
-    background: linear-gradient(45deg, #1878F2, #0a61d4, #aaa9a9, #f53844, #0a61d4);
+    background: linear-gradient(45deg, #1878F2, #0a61d4, #aaa9a9, #db1f26, #0a61d4);
     background-size: 400% 200%;
     animation: built-btn-animation 6s ease infinite;
     color: #fff;
     font-size: var(--fs-md) !important;
+    border-radius: 2px;
 }
 
 
@@ -75,7 +89,7 @@ header {
     left: 0; */
     width: 100%;
     height: 90dvh;
-    margin-top: 90px;
+    margin-top: 120px;
     width: 100%;
     height: 90dvh;
     position: relative;
@@ -96,7 +110,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.196);
+    background-color: rgba(0, 0, 0, 0.125);
     z-index: 2;
 }
 
@@ -107,7 +121,7 @@ header {
 .hero-content-area {
     position: relative;
     z-index: 3;
-    background-color: rgba(255, 0, 0, 0.267);
+    background-color: var(--before);
     position: absolute;
     top: 50%;
     left: 0;
@@ -135,20 +149,25 @@ header {
 }
 
 
+
+
+/*=======================================*/
+/*======     Services Css Here    =======*/
+/*=======================================*/
 .services-items {
     margin-left: 220px;
 }
 
 .services-items .my-card {
-    padding: 24px;
-    border-bottom: 1px solid var(--primary-color);
+    padding: 24px 24px;
+    border-bottom: 4px solid var(--primary-color);
 }
 
 .service .icon {
-    width: 70px;
-    height: 60px;
+    width: 74px;
+    height: 68px;
     font-size: var(--fs-xl);
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: var(--white);
     margin: 0 auto;
     border-radius: 2px;
@@ -160,10 +179,15 @@ header {
     bottom: 0;
     transform: translateY(110%);
     width: 100%;
-    background-color: rgba(0, 0, 139, 0.737);
+    background-color: var(--after);
     height: 60%;
     transition: .3s linear;
-    color: var(--white);
+}
+
+.service .hide-content p {
+    color: var(--secondary-color);
+    font-weight: var(--fw-600);
+    font-size: var(--fs-md);
 }
 
 .service:hover .hide-content {
@@ -179,7 +203,9 @@ header {
 
 
 
-/* events */
+/*=======================================*/
+/*======     Events  Css  Here    =======*/
+/*=======================================*/
 .events-items .event {
     transition: .3s linear;
 }
@@ -207,7 +233,9 @@ header {
 
 
 
-
+/*==============================================*/
+/*======     Image Gallery  Css  Here    =======*/
+/*==============================================*/
 .image-gallery-area swiper-container {
     width: 100%;
     padding-top: 50px;
@@ -231,10 +259,175 @@ header {
 
 
 
+/*============================================*/
+/*======     Board Member css  Here    =======*/
+/*============================================*/
+.board-area {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 24px;
+}
+
+.board-area .my-card {
+    width: 100%;
+    max-width: 360px;
+    height: 304px;
+    perspective: 1000px;
+}
+
+
+.director .my-card {
+    max-width: 100%;
+    height: 600px;
+}
+
+.board-area .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+.board-area .my-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.director .card-front {
+    background-color: var(--primary-hover-color);
+}
+
+.director .card-front .font-name {
+    color: var(--white);
+}
+
+.director .card-front .post {
+    color: var(--border-color);
+}
+
+.card-front {
+    background: var(--secondary-color);
+    border-radius: 0px;
+}
+
+.card-front .font-name {
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-600);
+}
+
+.card-front .post {
+    color: var(--gray2);
+}
+
+.board-area .card-front img {
+    max-height: 360px;
+    width: 100%;
+    min-width: 280px;
+    margin: 12px auto;
+    padding: 0px;
+    border: 6px solid rgb(39, 39, 55);
+}
+
+.director .card-front img {
+    border: 6px solid var(--after);
+}
+
+.board-area .content {
+    margin-top: 16px;
+}
+
+.board-area .content p {
+    color: var(--gray);
+}
+
+.card-back {
+    background: var(--secondary-hover);
+    color: #fff;
+    transform: rotateY(180deg);
+    padding: 20px;
+    text-align: center;
+}
+
+
+.payment-methods-items .item {
+    color: var(--primary-color);
+    font-size: var(--fs-md);
+    padding: 12px 16px;
+    background-color: transparent;
+    border: 1px solid var(--border-color2);
+}
+
+/*****  otehr member *****/
+.other-member .my-card {
+    padding: 8px;
+}
+
+.other-member .bg-image {
+    width: 80%;
+    height: 210px;
+    margin-top: -12px;
+
+}
+
+.other-member .card-front img {
+    width: 100%;
+    height: 94%;
+    padding: 0px;
+    object-fit: cover;
+    object-position: center;
+    min-width: unset;
+}
+
+.other-member .card-back h4,
+.other-member .card-back h5,
+.other-member .card-back p {
+    padding: 0 8px;
+}
+
+.other-member .board-area .content {
+    margin-top: 12px !important;
+}
+
+.other-member .post {
+    margin-top: -4px;
+    font-size: var(--fs-md);
+    font-weight: var(--fw-500);
+}
+
+.other-member .content h4 {
+    font-size: var(--fs-lg);
+}
+
+.other-member .card-front .font-name {
+    margin-bottom: 4px;
+    margin-top: -4px;
+}
 
 
 
 
+
+
+/*==============================================*/
+/*======     Responsive  Css  Here    =======*/
+/*==============================================*/
 @media (max-width:991px) {
     .hero-content-area .content {
         width: 100%;
@@ -249,5 +442,14 @@ header {
         height: 300px;
         /* border: 2px solid var(--white); */
         border-radius: 2px;
+    }
+
+
+
+    /* board area */
+    .board-area {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
     }
 }
