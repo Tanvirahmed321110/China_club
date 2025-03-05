@@ -13,7 +13,7 @@ header {
     z-index: 5;
     left: 0;
     width: 100%;
-    background-color: var(--secondary-color);
+    background-color: rgb(11, 11, 82);
     height: 120px;
     display: flex;
     align-items: center;
@@ -89,7 +89,7 @@ header {
     left: 0; */
     width: 100%;
     height: 90dvh;
-    margin-top: 120px;
+    margin-top: 110px;
     width: 100%;
     height: 90dvh;
     position: relative;
@@ -452,4 +452,78 @@ header {
         grid-template-columns: 1fr;
         gap: 24px;
     }
+}
+
+
+
+
+
+
+
+
+.footer-top {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/001/632/346/large_2x/modern-black-stripes-with-blue-neon-light-free-vector.jpg');
+    position: relative;
+    padding: 40px 0;
+    padding-bottom: 0px;
+}
+
+.footer-top-area {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-top-area p {
+    color: var(--border-color);
+}
+
+.footer-top::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11, 11, 84, 0.51);
+    z-index: 1;
+}
+
+.footer-top .links a {
+    color: var(--border-color2);
+    padding: 4px 0;
+}
+
+.footer-top .links a:hover {
+    color: var(--orange);
+}
+
+.footer-top .links a i {
+    transition: .2s linear;
+}
+
+.footer-top .links a:hover i {
+    transform: translateX(6px);
+    transition: .3s linear;
+}
+
+.footer-top .key {
+    color: var(--orange);
+    font-weight: var(--fw-500);
+    min-width: 80px;
+}
+
+.footer-top .value {
+    color: var(--border-color);
+}
+
+
+/* footer-bottom */
+.footer-bottom {
+    border-top: 1px solid var(--primary-hover-color);
+    padding-top: 8px;
+    background-color: rgba(0, 0, 128, 0.601);
 }
