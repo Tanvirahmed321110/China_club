@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>China_Club</title>
-        <link rel="stylesheet" href="./static/css/common.css">
+        <link rel="stylesheet" href="./static/css/all_pages.css">
     </head>
 
     <body>
@@ -18,11 +18,20 @@
                 <div class="header-area my-flex-between">
                     <div class="left">
                         <div class="logo">
-                            <img class="w-45" src="./static/images/logo.png" alt="Logo" loading="lazy">
+                            <img class="w-45" src="../static/images/logo.png" alt="Logo" loading="lazy">
                         </div>
                     </div>
-                    <div class="right">
-                        <nav>
+
+
+                    <!-- Mobile Menu Button -->
+                    <div class="">
+                        <button class="my-btn" id="mobile-menu-btn">
+                            <span><i class="ri-menu-3-fill"></i></span>
+                        </button>
+                    </div>
+
+                    <div class="right" id="mobile-menu-sidebar">
+                        <nav class="my-w-100">
                             <ul class="my-d-flex my-gap-1">
                                 <li><a class="nav-item" href="index.html">Home</a></li>
 
@@ -33,10 +42,10 @@
                                     </div>
 
                                     <ul class="my-dropdown">
-                                        <li><a class="dropdown-item" href="#">Item one</a></li>
-                                        <li><a class="dropdown-item" href="#">Item two</a></li>
-                                        <li><a class="dropdown-item" href="#">Item three</a></li>
-                                        <li><a class="dropdown-item" href="#">Item Four</a></li>
+                                        <li><a class="dropdown-item my-uppercase" href="#">Club History</a></li>
+                                        <li><a class="dropdown-item  my-uppercase" href="#">Board of Director</a></li>
+                                        <li><a class="dropdown-item  my-uppercase" href="#">Executive Members</a></li>
+                                        <li><a class="dropdown-item  my-uppercase" href="#">Past Presidents</a></li>
                                     </ul>
                                 </li>
 
@@ -47,17 +56,19 @@
                                     </div>
 
                                     <ul class="my-dropdown">
-                                        <li><a class="dropdown-item" href="#">Item one</a></li>
-                                        <li><a class="dropdown-item" href="#">Item two</a></li>
-                                        <li><a class="dropdown-item" href="#">Item three</a></li>
-                                        <li><a class="dropdown-item" href="#">Item Four</a></li>
+                                        <li><a class="dropdown-item my-uppercase" href="#">About US</a></li>
+                                        <li><a class="dropdown-item  my-uppercase" href="#">Our Events</a></li>
+                                        <li><a class="dropdown-item  my-uppercase" href="#">Executive Members</a></li>
+                                        <li><a class="dropdown-item  my-uppercase" href="#">Past Presidents</a></li>
                                     </ul>
                                 </li>
 
                                 <li><a class="nav-item" href="index.html">Gallery</a></li>
+                                <li><a class="nav-item" href="index.html">Trade show</a></li>
                                 <li><a class="nav-item" href="index.html">Contact</a></li>
                                 <li>
-                                    <div><a class="member-login-btn" href="index.html">Member Login</a></div>
+                                    <div><a class="member-login-btn" href="https://app.bdchinaclub.com.bd/login">Member
+                                            Login</a></div>
                                 </li>
                             </ul>
                         </nav>
@@ -78,15 +89,15 @@
                         <div class="hero-area">
                             <div class=" hero-content-area my-flex-between my-flex-sm-column">
                                 <div class="content">
-                                    <h1 class="my-text-white">Welcome To China Club</h1>
-                                    <p class="my-mt-3 my-text-border2">Short Description dolor sit amet consectetur
+                                    <h1 class="my-text-white">Welcome To <br>Bangladesh China Club Ltd.</h1>
+                                    <p class="my-mt-6 my-text-border2">Short Description dolor sit amet consectetur
                                         Lorem
                                         Short Description dolor sit amet
                                         consectetur,
                                         adipisicing elit. Quos
                                         exercitationem mollitia vero, adipisicing elit. Quos
                                         exercitationem mollitia vero?</p>
-                                    <div class="my-mt-5">
+                                    <div class="my-mt-6">
                                         <button class="my-btn my-primary-btn"><span>Details</span></button>
                                     </div>
                                 </div>
@@ -136,7 +147,7 @@
                                 class="services-items left-margin my-mt-6 my-grid-4 my-gap-4 my-grid-md-3 my-grid-sm-2">
 
                                 <!-- single service -->
-                                <a href="./service" class="my-card service ">
+                                <a href="#" class="my-card service ">
                                     <div class="icon my-flex-center">
                                         <img class="w-10"
                                             src="https://www.gulshanclub.com/wp-content/uploads/2021/06/Frame.png"
@@ -149,7 +160,7 @@
                                     </div>
                                 </a>
                                 <!-- single service -->
-                                <a href="./service" class="my-card service ">
+                                <a href="#" class="my-card service ">
                                     <div class="icon my-flex-center">
                                         <img class="w-10"
                                             src="https://www.gulshanclub.com/wp-content/uploads/2021/06/Frame-1.png"
@@ -162,7 +173,7 @@
                                     </div>
                                 </a>
                                 <!-- single service -->
-                                <a href="./service" class="my-card service ">
+                                <a href="#" class="my-card service ">
                                     <div class="icon my-flex-center">
                                         <img class="w-10"
                                             src="https://www.gulshanclub.com/wp-content/uploads/2021/06/Beauty-Parlor.png"
@@ -175,7 +186,7 @@
                                     </div>
                                 </a>
                                 <!-- single service -->
-                                <a href="./service" class="my-card service ">
+                                <a href="#" class="my-card service ">
                                     <div class="icon my-flex-center">
                                         <img class="w-10"
                                             src="https://www.gulshanclub.com/wp-content/uploads/2020/11/salon.svg"
@@ -188,7 +199,7 @@
                                     </div>
                                 </a>
                                 <!-- single service -->
-                                <a href="./service" class="my-card service ">
+                                <a href="#" class="my-card service ">
                                     <div class="icon my-flex-center">
                                         <img class="w-10"
                                             src="https://www.gulshanclub.com/wp-content/uploads/2020/11/cricket.svg"
@@ -201,7 +212,7 @@
                                     </div>
                                 </a>
                                 <!-- single service -->
-                                <a href="./service" class="my-card service ">
+                                <a href="#" class="my-card service ">
                                     <div class="icon my-flex-center">
                                         <img class="w-10"
                                             src="https://www.gulshanclub.com/wp-content/uploads/2021/06/Beauty-Parlor.png"
@@ -214,7 +225,7 @@
                                     </div>
                                 </a>
                                 <!-- single service -->
-                                <a href="./service" class="my-card service ">
+                                <a href="#" class="my-card service ">
                                     <div class="icon my-flex-center">
                                         <img class="w-10"
                                             src="https://www.gulshanclub.com/wp-content/uploads/2020/11/salon.svg"
@@ -227,7 +238,7 @@
                                     </div>
                                 </a>
                                 <!-- single service -->
-                                <a href="./service" class="my-card service ">
+                                <a href="#" class="my-card service ">
                                     <div class="icon my-flex-center">
                                         <img class="w-10"
                                             src="https://www.gulshanclub.com/wp-content/uploads/2020/11/cricket.svg"
@@ -264,36 +275,36 @@
                             <div class="events-items left-margin my-mt-6 my-grid-3 my-gap-4 my-grid-md-3 my-grid-sm-1">
 
                                 <!-- single event -->
-                                <a href="./service" class="my-card event ">
+                                <a href="#" class="my-card event ">
                                     <img src="https://ucl.com.bd/wp-content/uploads/2025/01/WhatsApp-Image-2025-01-21-at-5.00.52-PM.jpeg"
                                         alt="">
                                 </a>
 
 
                                 <!-- single event -->
-                                <a href="./service" class="my-card event ">
+                                <a href="#" class="my-card event ">
                                     <img src="https://ucl.com.bd/wp-content/uploads/2025/03/WhatsApp-Image-2025-03-01-at-19.17.57_b53b6a52.jpg"
                                         alt="">
                                 </a>
                                 <!-- single event -->
-                                <a href="./service" class="my-card event ">
+                                <a href="#" class="my-card event ">
                                     <img src="https://ucl.com.bd/wp-content/uploads/2025/02/WhatsApp-Image-2025-02-11-at-12.23.45-PM.jpeg"
                                         alt="">
                                 </a>
                                 <!-- single event -->
-                                <a href="./service" class="my-card event ">
+                                <a href="#" class="my-card event ">
                                     <img src="https://ucl.com.bd/wp-content/uploads/2025/01/WhatsApp-Image-2025-01-21-at-5.00.52-PM.jpeg"
                                         alt="">
                                 </a>
 
 
                                 <!-- single event -->
-                                <a href="./service" class="my-card event ">
+                                <a href="#" class="my-card event ">
                                     <img src="https://ucl.com.bd/wp-content/uploads/2025/01/WhatsApp-Image-2025-01-21-at-9.51.24-PM.jpeg"
                                         alt="">
                                 </a>
                                 <!-- single event -->
-                                <a href="./service" class="my-card event ">
+                                <a href="#" class="my-card event ">
                                     <img src="https://ucl.com.bd/wp-content/uploads/2025/02/WhatsApp-Image-2025-02-11-at-12.23.45-PM.jpeg"
                                         alt="">
                                 </a>
@@ -383,7 +394,7 @@
             <section>
                 <div class="my-container">
                     <div class="section-head">
-                        <h2> Board Member</h2>
+                        <h2> Board Members</h2>
                         <p>President & Board of Directors</p>
                     </div>
 
@@ -722,7 +733,57 @@
 
 
 
+        <section>
+            <div class="contact-area contact-home my-container">
+                <!-- Top Left -->
+                <div class="left ">
+                    <div class=" my-grid-4 my-gap-4 my-grid-md-2 my-grid-sm-1   my-mt-0 ">
 
+                        <!-- single contact item -->
+                        <div class="contact-area-item  my-d-flex my-align-center my-gap-4">
+                            <div class="icon my-flex-center"><i class="ri-customer-service-line"></i>
+                            </div>
+                            <div class="my-flex-1">
+                                <p>0192312123412</p>
+                            </div>
+                        </div>
+
+                        <!-- single contact item -->
+                        <div class="contact-area-item  my-d-flex my-align-center my-gap-4">
+                            <div class="icon my-flex-center"><i class="ri-mail-send-line"></i>
+                            </div>
+                            <div class="my-flex-1">
+                                <p>info@bdchinaclub.com.bd</p>
+                            </div>
+                        </div>
+
+                        <!-- single contact item -->
+                        <div class="contact-area-item  my-d-flex my-align-center my-gap-4">
+                            <div class="icon my-flex-center"><i class="ri-map-pin-line"></i>
+                            </div>
+                            <div class="my-flex-1">
+                                <p class="">House No 16-B Road No 93, Gulshan-2, Dhaka-1212,
+                                    Bangladesh
+                                </p>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Location map -->
+                        <div class="location-map">
+                            <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                                src="https://maps.google.com/maps?q=House%20NWJ-2%2FA%2C%20Bir%20Uttom%20Sultan%20Mahmud%2C%20Road%20%28Old%2050%29%2C%20Gulshan%202%2C%20Dhaka%201212%2C%20Bangladesh&amp;t=m&amp;z=15&amp;output=embed&amp;iwloc=near"
+                                title="House NWJ-2/A, Bir Uttom Sultan Mahmud, Road (Old 50), Gulshan 2, Dhaka 1212, Bangladesh"
+                                aria-label="House NWJ-2/A, Bir Uttom Sultan Mahmud, Road (Old 50), Gulshan 2, Dhaka 1212, Bangladesh"></iframe>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
         <!-- ===================================================== -->
         <!-- ==========   Image Gallery Section  Start    ======== -->
         <!-- ===================================================== -->
@@ -735,11 +796,12 @@
                             <!-- footer top item -->
                             <div class="item">
                                 <div class="logo">
-                                    <img class="w-30" src="./static/images/icon.png" alt="">
+                                    <img class="w-30" src="../static/images/icon.png" alt="">
                                 </div>
                                 <h4 class="my-mt-4 my-text-white"> Thanks For Visit Our Site</h4>
                                 <p class="my-mt-2">
-                                    The China Club Ltd. has emerged as an icon of elegance in its aristocracy, tradition
+                                    The China Club Bangladesh Ltd. has emerged as an icon of elegance in its
+                                    aristocracy, tradition
                                     and
                                     excellence.
                                 </p>
@@ -826,14 +888,14 @@
                                     <li class="my-d-flex my-align-start my-gap-2">
                                         <div class="key">Address:</div>
                                         <div class="value">
-                                            Plot # 6, Road # 9, Sector # 1 Uttara Model Town, Dhaka -
-                                            1230,Bangladesh
+                                            House No 16-B Road No 93, Gulshan-2,
+                                            Dhaka-1212, Bangladesh
                                         </div>
                                     </li>
                                     <li class="my-d-flex my-align-start my-gap-2">
                                         <div class="key">Email:</div>
                                         <div class="value">
-                                            chinaclub@gmail.com
+                                            info@bdchinaclub.com.bd
                                         </div>
                                     </li>
                                     <li class="my-d-flex my-align-start my-gap-2">
@@ -862,9 +924,10 @@
 
                     <div class="footer-bottom my-mt-10 ">
                         <div class="my-container">
-                            <div class="my-flex-between">
+                            <div class="my-flex-between my-flex-sm-column">
                                 <p class="my-text-border"> © Copyright 2025. All Rights Reserved. Developed by <a
-                                        href="#">HBLCO</a></p>
+                                        href="https://hsblco.com/" class="my-text-orange">HLBCO</a>
+                                </p>
                                 <p class="my-text-border2"> Thanks For vistiing our webiste </p>
                             </div>
                         </div>
@@ -883,7 +946,9 @@
             <div class=""><i class="ri-customer-service-line"></i></div>
         </div>
 
+
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+        <script src="../static/js/common.js"></script>
     </body>
 
 </html>

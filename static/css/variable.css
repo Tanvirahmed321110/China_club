@@ -5,10 +5,11 @@
 
 :root {
     /*______  Color  ______ */
-    --primary-color: #e4232a;
+    --primary-color: #db2229;
     --primary-hover-color: #be1f25;
     --secondary-color: #081621;
     --orange: #DEBE3E;
+    --orange2: rgb(204, 175, 56);
     --green: #0aad0a;
     --gray: #767676;
     --gray2: #9e9b9bdc;
@@ -18,9 +19,9 @@
     --white-off: #F0F3F2;
     --border-color: #ededed;
     --border-color2: #c7c7c7;
-    --after: #d88e2dc1;
+    --after: #d121277d;
     --before: #cbae3733;
-    --input: #debe3e4f;
+    --input: #d0b23979;
 
 
     /* ______ bg color in section ______ */
