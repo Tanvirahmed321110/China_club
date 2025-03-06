@@ -167,7 +167,20 @@ header {
 
 
 .my-mt-section {
-    margin-top: 120px;
+    margin-top: 140px;
+}
+
+
+.club-history-area p {
+    font-size: var(--fs-md);
+}
+
+.club-history-area .my-card {
+    transition: .3s linear;
+}
+
+.club-history-area .my-card:hover {
+    transform: scale(.98);
 }
 
 /*=======================================*/
