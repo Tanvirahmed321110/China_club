@@ -64,7 +64,7 @@ header {
     border: none;
 }
 
-.header-area .member-login-btn {
+.member-login-btn {
     word-wrap: normal;
     text-wrap: nowrap;
     padding: 10px 16px;
@@ -94,12 +94,14 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 90dvh;
     margin-top: 110px;
     width: 100%;
-    height: 90dvh;
+    height: 100dvh;
     position: relative;
-    background-image: url('https://scontent.fdac138-1.fna.fbcdn.net/v/t39.30808-6/469387663_1118783552948510_2806350733842140310_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=f0jt60BfURAQ7kNvgHQ3UVe&_nc_oc=Adgki8Y5xLTn4AblNVbWetS7HL5Zqi3Sy1NLDUdfsUXg-u6jZwMNTFvOGQajWjaSzAQ&_nc_zt=23&_nc_ht=scontent.fdac138-1.fna&_nc_gid=AFzFFzNF-LvQ1W0i01MXgTJ&oh=00_AYA5daKfExry0AscAWPpB4ewY4NkZlCwZBkOSIagf_xNKw&oe=67CA777C');
+    /* background-image: url('https://technoapogee.com/public/image/project/dhaka-club-limited-4-2023-08-20-00-51-44-454040.jpg'); */
+    background-image: url('https://api.bananiclub.org/web/uploads/1730886322860-slider-photo-banani%20club%20image%20.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .hero .hero-area {
@@ -246,6 +248,11 @@ header {
     transform: scale(.98);
 }
 
+
+.call.member-login-btn {
+    padding: 14px 20px;
+    border-radius: 4px;
+}
 
 
 
@@ -473,13 +480,14 @@ header {
 
 .contact-area.contact-home .contact-area-item {
     border-radius: 4px;
+    background-color: var(--primary-color);
 }
 
 .contact-area.contact-home .location-map {
     height: 160px !important;
     margin: 0;
     padding: 8px;
-    background-color: var(--dark);
+    background-color: var(--primary-color);
     border-radius: 4px;
 }
 
@@ -500,11 +508,9 @@ header {
 /*====================================================*/
 /*======     Our Partners Section css  Here    =======*/
 /*====================================================*/
-.our-partners-area .item img {
-    padding: 4px;
-    background-color: var(--white-off);
-    width: 100%;
-    height: 126px;
+.our-partners-area img {
+    margin: 0 auto;
+    width: 80%;
 }
 
 
@@ -521,6 +527,7 @@ header {
 
 .call-for-booking {
     border: 2px dotted var(--border-color2);
+    background-color: var(--primary-color);
 }
 
 
@@ -543,7 +550,7 @@ header {
 }
 
 .contact-area-item .icon {
-    background-color: var(--after);
+    background-color: var(--primary-hover-color);
     width: 45px !important;
     height: 45px !important;
     border-radius: 50%;
@@ -574,9 +581,155 @@ header {
 
 
 
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    grid-auto-flow: dense;
+}
+
+/* .gallery-head {
+    border-bottom: 2px solid var(--primary-color);
+    width: 54px;
+} */
+
+.gallery-head-border {
+    border-bottom: 2px solid var(--primary-color);
+    width: 100px;
+    margin-top: 0px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 2px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.wide {
+    grid-column: span 2;
+}
+
+.tall {
+    grid-row: span 2;
+}
 
 
 
+
+/* New Modal */
+/* New Modal */
+.my-modal-new {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.my-modal-new.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.image-modal-content {
+    position: relative;
+    background: #fff;
+    padding: 16px;
+    border-radius: 10px;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 50%;
+    min-height: 80dvh;
+}
+
+.image-modal-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    display: block;
+    border-radius: 8px;
+}
+
+.my-modal-new .modal-close-btn {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    color: var(--white);
+}
+
+.my-modal-new .modal-close-btn i {
+    font-size: 20px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.342);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 9;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+/*======================================================*/
+/*======     Trade Exhibition Page  Css  Here    =======*/
+/*======================================================*/
+.trade-items .item {
+    cursor: pointer;
+}
+
+.trade-items .item .img-wraper {
+    height: 220px;
+    width: 100%;
+    display: block;
+}
+
+.trade-items .item .img-wraper img {
+    height: 220px;
+}
+
+.trade-item-modal .modal-content {
+    max-width: 640px;
+    width: 100%;
+}
 
 
 /*=======================================*/
@@ -718,6 +871,10 @@ header {
         width: 100%;
         text-align: left;
         padding: 12px !important;
+    }
+
+    .hero {
+        height: 800px;
     }
 
     /* Hero Content */

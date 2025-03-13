@@ -1,4 +1,5 @@
 
+import { closeButtonF, openModalF } from './utilitis.js';
 
 // For Mobile Sidebar
 const menuButton = document.getElementById('mobile-menu-btn')
@@ -17,3 +18,10 @@ menuButton.addEventListener('click', function () {
 
     menuSidebar.classList.toggle('active')
 })
+
+closeButtonF()
+
+
+
+// open modal for trade exhibition
+openModalF('trade-item-modal', '.trade-items .item');

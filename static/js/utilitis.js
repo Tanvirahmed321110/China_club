@@ -1,15 +1,24 @@
 // Open Modal Function
+// Open Modal Function
 export function openModalF(modalId, btnSelector) {
-    const modal = document.getElementById(modalId)
-    const btns = document.querySelectorAll(btnSelector)
+    const modal = document.getElementById(modalId); // Trim in case of accidental spaces
+    const btns = document.querySelectorAll(btnSelector);
 
+    if (!modal) {
+        console.error(`Modal with ID "${modalId}" not found.`);
+        return;
+    }
 
     btns.forEach(btn => {
         btn.addEventListener('click', function () {
-            modal.classList.add('active')
-        })
-    })
+            modal.classList.add('active');
+        });
+    });
+
 }
+
+
+
 
 
 // close button funciton
@@ -26,7 +35,6 @@ export function closeButtonF() {
         });
     });
 }
-
 
 
 // Sidebar toggle function
@@ -297,18 +305,6 @@ function dropdwonToggle(wrapperId) {
 }
 
 
-dropdwonToggle('category-sticky')
-
-
-
-const allCategoryClose = document.getElementById('all-category-close');
-const mobileMenuIcon = document.getElementById('mobile-menu-icon');
-
-// Listen for a click event on the 'all-category-close' button
-allCategoryClose.addEventListener('click', function () {
-    // Remove the 'active' class from the mobile menu icon when the category close button is clicked
-    mobileMenuIcon.classList.remove('active');
-});
 
 
 
