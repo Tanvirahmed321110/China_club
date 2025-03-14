@@ -513,6 +513,17 @@ header {
     width: 80%;
 }
 
+.donate-area input {
+    width: 400px;
+}
+
+.donate-area .border-down {
+    border: 1px solid var(--border-color2);
+    width: 120px;
+    text-align: center;
+    margin: 0 auto;
+}
+
 
 
 
@@ -714,6 +725,12 @@ header {
 /*======================================================*/
 .trade-items .item {
     cursor: pointer;
+    transition: .2s linear;
+}
+
+.trade-items .item:hover {
+    /* outline: 2px solid var(--after); */
+    box-shadow: var(--shadow-3);
 }
 
 .trade-items .item .img-wraper {
@@ -731,6 +748,41 @@ header {
     width: 100%;
 }
 
+.trade-item-modal .location-map {
+    height: 400px;
+}
+
+.network-community .item {
+    padding-top: 0 !important;
+}
+
+
+/* Modal arrow icons */
+.image-modal-content {
+    position: relative;
+}
+
+.arrow-icons {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.arrow-icons button {
+    width: 44px;
+    height: 40px;
+    z-index: 4;
+    position: relative;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: var(--fs-lg);
+}
+
+.arrow-icons button:hover {
+    background-color: black;
+}
 
 /*=======================================*/
 /*======     Footer  css  Here    =======*/
@@ -900,5 +952,9 @@ header {
         display: grid;
         grid-template-columns: 1fr;
         gap: 24px;
+    }
+
+    .donate-area input {
+        width: 300px;
     }
 }

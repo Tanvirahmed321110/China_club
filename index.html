@@ -765,6 +765,97 @@
             </section>
 
 
+            <!-- ======================================================= -->
+            <!-- ==========   CRS of director Section  Start    ======== -->
+            <!-- ======================================================= -->
+            <section>
+                <div class="my-container crs">
+                    <div class="section-head">
+                        <h2>Our CRS</h2>
+                        <p>short name</p>
+                    </div>
+
+                    <div class="left-margin">
+                        <div class="swiper  crs-slider  ">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="./crs_details.html" class="item my-bg-white my-p-2">
+                                        <div>
+                                            <img src="https://www.spaandanb.org/wp-content/uploads/2025/02/zakat-1024x576.png"
+                                                alt="">
+                                        </div>
+                                        <h5 class="my-p-2">Zakat Bitoron 2025</h5>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="./crs_details.html" class="item my-bg-white my-p-2 ">
+                                        <div>
+                                            <img src="https://sadaqa.org.au/storage/projects/v3ikhU4j9ohJfdm7prEN8S6w2HdiE3iRhZd7CBKo.jpg"
+                                                alt="">
+                                        </div>
+                                        <h5 class="my-p-2">Zakat Bitoron 2025</h5>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="./crs_details.html" class="item my-bg-white my-p-2 ">
+                                        <div>
+                                            <img src="https://www.spaandanb.org/wp-content/uploads/2025/02/zakat-1024x576.png"
+                                                alt="">
+                                        </div>
+                                        <h5 class="my-p-2">Zakat Bitoron 2025</h5>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="./crs_details.html" class="item my-bg-white my-p-2 ">
+                                        <div>
+                                            <img src="https://sadaqa.org.au/storage/footer/AxGO3fppfafu7ZVdGyT8ymV8KgbJQoGAKeDXkFkJ.jpg"
+                                                alt="">
+                                        </div>
+                                        <h5 class="my-p-2">Zakat Bitoron 2025</h5>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="./crs_details.html" class="item my-bg-white my-p-2 ">
+                                        <div>
+                                            <img src="https://sadaqa.org.au/storage/projects/v3ikhU4j9ohJfdm7prEN8S6w2HdiE3iRhZd7CBKo.jpg"
+                                                alt="">
+                                        </div>
+                                        <h5 class="my-p-2">Foods Donate 2024</h5>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="./crs_details.html" class="item my-bg-white my-p-2 ">
+                                        <div>
+                                            <img src="https://www.spaandanb.org/wp-content/uploads/2025/02/zakat-1024x576.png"
+                                                alt="">
+                                        </div>
+                                        <h5 class="my-p-2">Zakat Bitoron 2025</h5>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- donate now -->
+                        <div class="my-mt-4 donate-area my-bg-white my-p-4">
+                            <div>
+                                <h3 class="my-text-center">Donate Now</h3>
+                                <div class="border-down"></div>
+                            </div>
+
+
+                            <form action="#" class="my-flex-center my-align-center my-gap-2  my-mt-6 my-align-center">
+                                <div class="my-input-control">
+                                    <input type="text" placeholder="Enter Your name">
+                                </div>
+                                <div>
+                                    <button class="my-btn my-primary-btn"><span>Submit</span></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
 
 
             <!-- ===================================================== -->
@@ -1090,6 +1181,8 @@
 
         <script src="../static/js/common.js"></script>
         <script>
+
+            // For Partner Slider
             var swiper = new Swiper(".partners-slider", {
                 slidesPerView: "auto", // Automatically adjust slide width
                 spaceBetween: 20,
@@ -1103,6 +1196,26 @@
                 freeModeMomentum: true, // Adds inertia effect
                 breakpoints: {
                     1024: { slidesPerView: 5 },
+                    768: { slidesPerView: 3 },
+                    480: { slidesPerView: 2 },
+                },
+            });
+
+
+            // FOr CRS SLider
+            var swiper = new Swiper(".crs-slider", {
+                slidesPerView: "auto", // Automatically adjust slide width
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 3000, // No delay, continuous movement
+                    disableOnInteraction: false,
+                },
+                speed: 4800, // Adjust to control smoothness
+                freeMode: true, // Enables continuous smooth scrolling
+                freeModeMomentum: true, // Adds inertia effect
+                breakpoints: {
+                    1024: { slidesPerView: 4 },
                     768: { slidesPerView: 3 },
                     480: { slidesPerView: 2 },
                 },

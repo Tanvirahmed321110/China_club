@@ -575,11 +575,12 @@ textarea::placeholder {
     transition: transform .2s linear;
     border: 1px solid var(--white-off);
     padding: 22px 0;
+    overflow-y: auto;
 }
 
 .my-modal .modal-content.lg {
-    max-width: 80%;
-    max-height: 90dvh;
+    max-width: 70%;
+    max-height: 80dvh;
 }
 
 .shipping-address-modal .modal-content {

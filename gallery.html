@@ -42,11 +42,12 @@
                                     </div>
 
                                     <ul class="my-dropdown">
-                                        <li><a class="dropdown-item my-uppercase" href="../club_history.html">Club
+                                        <li><a class="dropdown-item my-uppercase" href="./club_history.html">Club
                                                 History</a></li>
                                         <li><a class="dropdown-item  my-uppercase"
-                                                href="../executive_member.html">Executive Members</a></li>
-                                        <li><a class="dropdown-item  my-uppercase" href="../past_president.html">Past
+                                                href="./executive_member.html">Executive
+                                                Members</a></li>
+                                        <li><a class="dropdown-item  my-uppercase" href="./past_president.html">Past
                                                 Presidents</a></li>
                                     </ul>
                                 </li>
@@ -58,28 +59,53 @@
                                     </div>
 
                                     <ul class="my-dropdown">
-                                        <li>
-                                            <a class="dropdown-item my-uppercase"
-                                                href="../event_pages/running_events.html">Running
-                                                Events</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item  my-uppercase"
-                                                href="../event_pages/upcomming_events.html">Up
+                                        <li><a class="dropdown-item my-uppercase"
+                                                href="./event_pages/running_events.html">Running
+                                                Events</a></li>
+                                        <li><a class="dropdown-item  my-uppercase"
+                                                href="./event_pages/upcomming_events.html">Up
                                                 Comming
-                                                Events</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item  my-uppercase"
-                                                href="../event_pages/past_events.html">Past
+                                                Events</a></li>
+                                        <li><a class="dropdown-item  my-uppercase"
+                                                href="./event_pages/past_events.html">Past
                                                 Events</a>
                                         </li>
                                     </ul>
                                 </li>
 
-                                <li><a class="nav-item" href="index.html">Gallery</a></li>
-                                <li><a class="nav-item" href="index.html">Trade show</a></li>
-                                <li><a class="nav-item" href="index.html">Contact</a></li>
+                                <li><a class="nav-item" href="./gallery.html">Gallery</a></li>
+
+                                <!-- Trade Show -->
+                                <li class="my-dropdown-parent">
+                                    <div class="my-flex-center nav-item my-gap-2 ">Trade Show <span><i
+                                                class="ri-arrow-down-s-line"></i></span>
+                                    </div>
+
+                                    <ul class="my-dropdown">
+                                        <li>
+                                            <a class="dropdown-item  my-uppercase" href="./trade_exhibition.html">Trade
+                                                Exhibition</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item  my-uppercase"
+                                                href="./business_networking.html">Business
+                                                Networking</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item  my-uppercase"
+                                                href="./business_conference.html">Business
+                                                Conference</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item  my-uppercase"
+                                                href="./chinese_community.html">Chinese
+                                                Community</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li><a class="nav-item" href="contact.html">Contact</a></li>
+
                                 <li>
                                     <div><a class="member-login-btn" href="https://app.bdchinaclub.com.bd/login">Member
                                             Login</a></div>
@@ -90,6 +116,7 @@
                 </div>
             </div>
         </header>
+
 
 
         <main>
@@ -338,10 +365,14 @@
         <!-- ==========    Image Modal Start  Here   ======== -->
         <!-- ================================================ -->
         <div class="my-modal-new">
-            <div class="image-modal-content">
+            <div class="image-modal-content my-p-relative">
                 <button class="my-btn my-primary-btn modal-close-btn"><span><i
                             class="ri-close-line"></i></span></button>
                 <img id="modal-image" src="" alt="Modal Image">
+                <div class="my-flex-between arrow-icons">
+                    <button class="left"><i class="ri-arrow-left-line"></i></button>
+                    <button class="right"><i class="ri-arrow-right-line"></i></button>
+                </div>
             </div>
         </div>
         <div class="overlay"></div>
@@ -356,6 +387,7 @@
         <div class="overlay"></div>
 
 
+        <script src="./static/js/common.js"></script>
         <script>
             // New Modal Here
             document.addEventListener("DOMContentLoaded", function () {
@@ -395,8 +427,99 @@
                     }
                 });
             });
+
+
+            // change modal image when i click arrow button
+            function setupModalImageNavigation(modalSelector, modalImageSelector, leftArrowSelector, rightArrowSelector) {
+                const modal = document.querySelector(modalSelector);
+                const modalImage = document.querySelector(modalImageSelector);
+                const leftArrow = document.querySelector(leftArrowSelector);
+                const rightArrow = document.querySelector(rightArrowSelector);
+                let currentImageIndex = 0;
+                let currentGalleryImages = [];
+
+                function openModal(imageSrc, images) {
+                    modalImage.src = imageSrc;
+                    modal.style.display = 'flex';
+                    currentGalleryImages = images;
+                    currentImageIndex = currentGalleryImages.indexOf(imageSrc);
+                }
+
+                function closeModal() {
+                    modal.classList.remove('active')
+                }
+
+                function updateModalImage() {
+                    modalImage.src = currentGalleryImages[currentImageIndex];
+                }
+
+                // Function to set up modal image navigation for a gallery
+                function setupGalleryModal(galleryGridSelector) {
+                    const galleryGrid = document.querySelector(galleryGridSelector);
+                    if (!galleryGrid) return; // Exit if gallery grid not found
+                    const galleryItems = galleryGrid.querySelectorAll('img');
+                    const images = Array.from(galleryItems).map(img => img.src);
+
+                    galleryItems.forEach(img => {
+                        img.addEventListener('click', function () {
+                            openModal(this.src, images);
+                        });
+                    });
+                }
+
+                leftArrow.addEventListener('click', function () {
+                    if (currentGalleryImages.length > 0) {
+                        currentImageIndex--;
+                        if (currentImageIndex < 0) {
+                            currentImageIndex = currentGalleryImages.length - 1;
+                        }
+                        updateModalImage();
+                    }
+                });
+
+                rightArrow.addEventListener('click', function () {
+                    if (currentGalleryImages.length > 0) {
+                        currentImageIndex++;
+                        if (currentImageIndex >= currentGalleryImages.length) {
+                            currentImageIndex = 0;
+                        }
+                        updateModalImage();
+                    }
+                });
+
+                modal.addEventListener('click', function (event) {
+                    if (event.target === modal) {
+                        closeModal();
+                    }
+                });
+
+                document.addEventListener('keydown', function (event) {
+                    if (event.key === 'Escape') {
+                        closeModal();
+                    }
+                });
+
+                return {
+                    setupGalleryModal: setupGalleryModal,
+                    closeModal: closeModal
+                };
+            }
+
+            // Example usage:
+            document.addEventListener('DOMContentLoaded', function () {
+                const modalNav = setupModalImageNavigation(
+                    '.my-modal-new',
+                    '#modal-image',
+                    '.arrow-icons .left',
+                    '.arrow-icons .right'
+                );
+
+                const galleryGrids = document.querySelectorAll('.gallery-grid');
+                galleryGrids.forEach(grid => {
+                    modalNav.setupGalleryModal('.' + grid.classList[0]);
+                });
+            });
         </script>
-        <script src="./static/js/common.js"></script>
     </body>
 
 </html>
