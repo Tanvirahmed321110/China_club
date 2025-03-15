@@ -1,6 +1,7 @@
 
 import { closeButtonF, openModalF } from './utilitis.js';
 
+console.log('hello')
 // For Mobile Sidebar
 const menuButton = document.getElementById('mobile-menu-btn')
 const menuSidebar = document.getElementById('mobile-menu-sidebar')

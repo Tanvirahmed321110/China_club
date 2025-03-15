@@ -1,5 +1,4 @@
 // Open Modal Function
-// Open Modal Function
 export function openModalF(modalId, btnSelector) {
     const modal = document.getElementById(modalId); // Trim in case of accidental spaces
     const btns = document.querySelectorAll(btnSelector);
@@ -109,61 +108,9 @@ export function updateQuantity(inputField, operation) {
 
 
 
-// setup quantity
-function setupQuantityButtons() {
-    const allCartItems = document.querySelectorAll('.shopping-cart-modal .item');
-
-    allCartItems.forEach((item) => {
-        const plusButton = item.querySelector('.plus-btn');
-        const minusButton = item.querySelector('.minus-btn');
-        const inputField = item.querySelector('.input-field');
-
-        // Add event listener for the plus button
-        plusButton.addEventListener('click', function () {
-            updateQuantity(inputField, 'increment');
-        });
-
-        // Add event listener for the minus button
-        minusButton.addEventListener('click', function () {
-            updateQuantity(inputField, 'decrement');
-        });
-    });
-
-}
-
-// Call setupQuantityButtons
-setupQuantityButtons();
 
 
 
-
-// Search Dropdown
-export function openSearchDropdown() {
-    const input = document.getElementById('search-input')
-    const dropdwon = document.getElementById('search-dropdown')
-
-
-    input.addEventListener('input', function () {
-        if (input.value.trim() !== '') {
-            dropdwon.classList.add('active');
-
-        } else {
-            dropdwon.classList.remove('active');
-        }
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function (event) {
-        const isClickInside = dropdwon.contains(event.target) || input.contains(event.target);
-        if (!isClickInside) {
-            dropdwon.classList.remove('active'); // Close dropdown
-
-            if (dropdwon) {
-                dropdwon.classList.remove('active');
-            }
-        }
-    });
-}
 
 
 
@@ -212,39 +159,6 @@ export function quickViewF(buttons) {
 
 
 
-
-// big image change
-export function bigImageChangeF(bigImg, smallImgsSelector) {
-    const bigImage = document.getElementById(bigImg)
-    const smallImgs = document.querySelectorAll(smallImgsSelector)
-
-    activeF('.small-images img')
-
-    if (bigImage && smallImgs) {
-        smallImgs.forEach(img => {
-            img.addEventListener('click', function () {
-                bigImage.src = this.src
-            })
-        })
-    }
-
-}
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const upBtn = document.querySelector(".up-btn");
-
-    if (upBtn) {
-        window.addEventListener("scroll", function () {
-            if (window.scrollY > 400) {
-                upBtn.classList.add("active"); // Show button
-            } else {
-                upBtn.classList.remove("active"); // Hide button
-            }
-        });
-    }
-});
 
 
 
