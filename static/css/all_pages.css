@@ -667,20 +667,22 @@ header {
     background: #fff;
     padding: 16px;
     border-radius: 10px;
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 84%;
+    max-height: 1000px;
     display: flex;
     justify-content: center;
     align-items: center;
     min-width: 50%;
-    min-height: 80dvh;
+    overflow-y: auto;
 }
 
 .image-modal-content img {
     max-width: 100%;
-    max-height: 80vh;
+    max-height: 96vh;
+    height: auto;
     display: block;
     border-radius: 8px;
+    object-fit: contain;
 }
 
 .my-modal-new .modal-close-btn {
@@ -782,6 +784,10 @@ header {
 
 .arrow-icons button:hover {
     background-color: black;
+}
+
+.my-cursor-pointer {
+    cursor: pointer;
 }
 
 /*=======================================*/
@@ -956,5 +962,9 @@ header {
 
     .donate-area input {
         width: 300px;
+    }
+
+    .right-fixed {
+        right: 40px;
     }
 }
